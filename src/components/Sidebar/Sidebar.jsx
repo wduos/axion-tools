@@ -21,11 +21,12 @@ function Sidebar({ currentPage, shown }) {
         </small>
       </div>
       <div className="page-list">
-        {pages.map((page) => (
+        {pages.map((page, index) => (
           <SidebarItem
             current={page.name === currentPage}
             title={page.name}
             linksTo={page.path}
+            key={index}
           />
         ))}
       </div>

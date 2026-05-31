@@ -7,18 +7,29 @@ import "./Home.css";
 
 function Home() {
   const pageName = "Home";
+  const cards = [
+    {
+      cardDescription: "Reliable inbound inspections",
+      logoImg: inspectrLogoImg,
+      imgAlt: "Inspectr logo",
+      tags: ["Operational", "Mobile Compatible"],
+    },
+  ];
 
   return (
     <>
       <Header currentPage={pageName} />
 
       <section className="Home">
-        <Card
-          logoImg={inspectrLogoImg}
-          imgAlt="Inspectr logo"
-          cardDescription="More efficient inbound inspections"
-          cardTag="Operational"
-        />
+        {cards.map((card, index) => (
+          <Card
+            logoImg={card.logoImg}
+            imgAlt={card.imgAlt}
+            cardDescription={card.cardDescription}
+            cardTags={card.tags}
+            key={index}
+          />
+        ))}
         <Card />
       </section>
     </>

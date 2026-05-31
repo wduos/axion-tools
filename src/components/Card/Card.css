@@ -1,6 +1,6 @@
 .Card {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: var(--spacing);
@@ -23,7 +23,7 @@
   box-shadow: 3px 3px 10px var(--accent-opaque);
   cursor: pointer;
 }
-.Card > div {
+.Card > div:nth-child(1) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +31,7 @@
   height: 4rem;
   padding: var(--spacing);
 }
-.Card > div > img {
+.Card > div:nth-child(1) > img {
   height: 90%;
 }
 .Card > small {
@@ -39,7 +39,12 @@
   font-size: 0.85rem;
   line-height: 0.85rem;
 }
-.Card > .card-tag {
+.Card > .tags-wrp {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.Card > .tags-wrp > .card-tag {
   display: inline-block;
   margin: 0;
   padding: var(--spacing-1);
@@ -47,20 +52,8 @@
   font-size: 0.75rem;
   line-height: 0.75rem;
   font-weight: 600;
-  color: var(--accent);
-  background-color: var(--light-tint);
-}
-.Card > .card-tag::before {
-  content: "";
-  display: inline-block;
-  width: var(--spacing-1);
-  margin-right: 0.35rem;
-  aspect-ratio: 1/1;
-  background-color: var(--accent);
-  border-radius: 50%;
-}
-.Card.empty {
-  align-items: center;
+  color: var(--green);
+  background-color: var(--green-tint);
 }
 .Card.empty:hover {
   outline: solid 2px transparent;

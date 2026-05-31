@@ -2,8 +2,8 @@ import calendarImg from "../../assets/calendar.png";
 
 import "./Card.css";
 
-function Card({ logoImg, imgAlt, cardDescription, cardTag }) {
-  if (!logoImg || !imgAlt || !cardDescription || !cardTag) {
+function Card({ logoImg, imgAlt, cardDescription, cardTags }) {
+  if (!logoImg || !imgAlt || !cardDescription || !cardTags) {
     return (
       <div className="Card empty">
         <div>
@@ -20,7 +20,13 @@ function Card({ logoImg, imgAlt, cardDescription, cardTag }) {
         <img src={logoImg} alt={imgAlt} />
       </div>
       <small className="dim">{cardDescription}</small>
-      <p className="card-tag">{cardTag}</p>
+      <div className="tags-wrp">
+        {cardTags.map((tag, index) => (
+          <p className="card-tag" key={index}>
+            {tag}
+          </p>
+        ))}
+      </div>
     </div>
   );
 }
