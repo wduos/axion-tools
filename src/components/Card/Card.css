@@ -42,6 +42,7 @@
 .Card > .tags-wrp {
   display: flex;
   align-items: center;
+  gap: var(--spacing-1);
   margin: 0;
 }
 .Card > .tags-wrp > .card-tag {
