@@ -4,7 +4,7 @@ import logoShieldImg from "../../assets/logo-shield.svg";
 import iconHouse from "../../assets/icons/house.svg";
 import iconLayers from "../../assets/icons/layers.svg";
 
-function Sidebar({ currentPage }) {
+function Sidebar({ currentPage, shown }) {
   const pages = [
     { name: "Home", path: "/" },
     { name: "Inspectr", path: "/inspectr" },
@@ -12,7 +12,7 @@ function Sidebar({ currentPage }) {
   ];
 
   return (
-    <aside className="Sidebar">
+    <aside className={shown ? "Sidebar show" : "Sidebar"}>
       <div className="sidebar-head">
         <img src={logoShieldImg} alt="Axion's logo" />
         <h1>Axion</h1>
