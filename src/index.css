@@ -59,19 +59,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
 
-  --dot-size: 3px;
-  --dot-space: 1.5rem;
-  background:
-    linear-gradient(
-        90deg,
-        white calc(var(--dot-space) - var(--dot-size)),
-        transparent 1%
-      )
-      center / var(--dot-space) var(--dot-space),
-    linear-gradient(
-        white calc(var(--dot-space) - var(--dot-size)),
-        transparent 1%
-      )
-      center / var(--dot-space) var(--dot-space),
-    var(--light-tint);
+  background-image: linear-gradient(45deg, var(--light-tint) 20%, white);
 }
