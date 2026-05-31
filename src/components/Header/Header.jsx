@@ -3,12 +3,14 @@ import logoImg from "../../assets/logo.svg";
 import iconBars from "../../assets/icons/bars.svg";
 import iconHouse from "../../assets/icons/house.svg";
 import iconLayers from "../../assets/icons/layers.svg";
+import iconInfo from "../../assets/icons/info.svg";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import { useState } from "react";
 
 function Header({ currentPage }) {
   const [showSidebar, setShowSidebar] = useState(false);
   const isHome = currentPage === "Home";
+  const isInfo = currentPage === "Info";
 
   function handleShowSidebar() {
     setShowSidebar(!showSidebar);
@@ -26,6 +28,8 @@ function Header({ currentPage }) {
           <div>
             {isHome ? (
               <img src={iconHouse} alt="House icon" />
+            ) : isInfo ? (
+              <img src={iconInfo} alt="Info icon" />
             ) : (
               <img src={iconLayers} alt="Layers icon" />
             )}

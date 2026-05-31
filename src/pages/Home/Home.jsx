@@ -13,16 +13,13 @@ function Home() {
       <Header currentPage={pageName} />
 
       <section className="Home">
-        <img src={logoImg} alt="Axion's logo" />
-        <div className="cards-wrp">
-          <Card
-            logoImg={inspectrLogoImg}
-            imgAlt="Inspectr logo"
-            cardDescription="More efficient inbound inspections"
-            cardTag="Operational"
-          />
-          <Card />
-        </div>
+        <Card
+          logoImg={inspectrLogoImg}
+          imgAlt="Inspectr logo"
+          cardDescription="More efficient inbound inspections"
+          cardTag="Operational"
+        />
+        <Card />
       </section>
     </>
   );

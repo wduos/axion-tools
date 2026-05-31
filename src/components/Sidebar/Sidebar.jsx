@@ -16,6 +16,9 @@ function Sidebar({ currentPage, shown }) {
       <div className="sidebar-head">
         <img src={logoShieldImg} alt="Axion's logo" />
         <h1>Axion</h1>
+        <small className="dim center">
+          Tools and helpers for Operations and Administration
+        </small>
       </div>
       <div className="page-list">
         {pages.map((page) => (

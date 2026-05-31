@@ -1,14 +1,15 @@
 .SidebarItem {
   width: calc(100% - var(--spacing) * 2);
   padding: var(--spacing);
-  border-radius: var(--radius-1);
+  border-top-right-radius: var(--radius-1);
+  border-bottom-right-radius: var(--radius-1);
   background-color: white;
   text-decoration: none;
   color: var(--dark);
   transition: background-color 0.2s ease-out;
 }
 .SidebarItem:hover {
-  background-color: var(--border);
+  background-color: var(--light-tint);
   cursor: pointer;
 }
 .SidebarItem > h4 {
@@ -21,14 +22,7 @@
   line-height: 1rem;
 }
 .SidebarItem.current {
-  background-color: var(--accent);
-  color: white;
-}
-.SidebarItem.current > h4::before {
-  content: "";
-  display: block;
-  width: var(--spacing-1);
-  aspect-ratio: 1/1;
-  background-color: white;
-  border-radius: 50%;
+  background-color: var(--light-tint);
+  border-left: solid 2px var(--accent);
+  color: var(--accent);
 }

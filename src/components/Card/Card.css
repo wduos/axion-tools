@@ -15,7 +15,7 @@
   user-select: none;
 
   @media (max-width: 466px) {
-    width: 100%;
+    width: calc(100% - var(--spacing) * 2);
   }
 }
 .Card:hover {
