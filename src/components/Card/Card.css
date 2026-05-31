@@ -1,0 +1,72 @@
+.Card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--spacing);
+  min-width: 15rem;
+  min-height: 9.8rem;
+  border: solid 1px var(--border);
+  border-radius: var(--radius);
+  outline: solid 2px transparent;
+  padding: var(--spacing);
+  background-color: white;
+  transition: outline 0.3s ease-out;
+  user-select: none;
+
+  @media (max-width: 466px) {
+    width: 100%;
+  }
+}
+.Card:hover {
+  outline: solid 2px var(--accent);
+  box-shadow: 3px 3px 10px var(--accent-opaque);
+  cursor: pointer;
+}
+.Card > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - var(--spacing) - var(--spacing));
+  height: 4rem;
+  padding: var(--spacing);
+}
+.Card > div > img {
+  height: 90%;
+}
+.Card > small {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 0.85rem;
+}
+.Card > .card-tag {
+  display: inline-block;
+  margin: 0;
+  padding: 0.4rem;
+  border-radius: var(--radius-1);
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  background-color: var(--light-tint);
+}
+.Card > .card-tag::before {
+  content: "";
+  display: inline-block;
+  width: 0.4rem;
+  margin-right: 0.35rem;
+  aspect-ratio: 1/1;
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+.Card.empty {
+  align-items: center;
+}
+.Card.empty:hover {
+  outline: solid 2px transparent;
+  box-shadow: none;
+  cursor: default;
+}
+.Card.empty img {
+  opacity: 0.55;
+}
