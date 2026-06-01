@@ -1,9 +1,9 @@
 import calendarImg from "../../assets/calendar.png";
-
+import { Link } from "react-router-dom";
 import "./Card.css";
 
-function Card({ logoImg, imgAlt, cardDescription, cardTags }) {
-  if (!logoImg || !imgAlt || !cardDescription || !cardTags) {
+function Card({ path, logoImg, imgAlt, cardDescription, cardTags }) {
+  if (!path || !logoImg || !imgAlt || !cardDescription || !cardTags) {
     return (
       <div className="Card empty">
         <div>
@@ -15,7 +15,7 @@ function Card({ logoImg, imgAlt, cardDescription, cardTags }) {
   }
 
   return (
-    <div className="Card">
+    <Link className="Card" to={path}>
       <div>
         <img src={logoImg} alt={imgAlt} />
       </div>
@@ -27,7 +27,7 @@ function Card({ logoImg, imgAlt, cardDescription, cardTags }) {
           </p>
         ))}
       </div>
-    </div>
+    </Link>
   );
 }
 

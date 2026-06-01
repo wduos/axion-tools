@@ -12,6 +12,7 @@
   padding: var(--spacing);
   background-color: white;
   transition: outline 0.3s ease-out;
+  text-decoration: none;
   user-select: none;
 
   @media (max-width: 466px) {

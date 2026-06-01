@@ -1,0 +1,104 @@
+:root {
+  --min-radius: 9rem;
+  --max-radius: 11rem;
+}
+
+.Inspectr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--spacing);
+  margin-top: 3.5rem;
+  height: calc(100% - 3.5rem);
+}
+.Inspectr > img {
+  height: 3rem;
+}
+.Inspectr > small {
+  padding-inline: var(--spacing);
+}
+.Inspectr > .blob-wrp {
+  position: relative;
+}
+.Inspectr > .blob-wrp > .blob {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  aspect-ratio: 1/1;
+  background-image: radial-gradient(var(--accent-alt), var(--accent));
+  border-top-left-radius: var(--min-radius);
+  border-bottom-left-radius: var(--min-radius);
+  border-bottom-right-radius: var(--max-radius);
+  border-top-right-radius: var(--max-radius);
+  user-select: none;
+  animation: 15s cubic-bezier(0.58, -0.78, 0.5, 1.8) 1s infinite forwards blob;
+}
+.Inspectr > .blob-wrp > .blob > img {
+  height: 2.5rem;
+  transform: rotate(-90deg);
+}
+.Inspectr > .blob-wrp > .blob.alt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(90deg);
+  background-image: none;
+  background-color: var(--accent-opaque);
+  border-top-left-radius: var(--min-radius);
+  border-bottom-left-radius: var(--min-radius);
+  border-bottom-right-radius: var(--max-radius);
+  border-top-right-radius: var(--max-radius);
+  animation: 20s cubic-bezier(0.41, -0.59, 0.13, 1.58) 1s infinite forwards blob;
+}
+
+@keyframes blob {
+  0% {
+    border-top-left-radius: var(--min-radius);
+    border-bottom-left-radius: var(--min-radius);
+    border-bottom-right-radius: var(--max-radius);
+    border-top-right-radius: var(--max-radius);
+  }
+  20% {
+    border-top-left-radius: var(--max-radius);
+    border-bottom-left-radius: var(--min-radius);
+    border-bottom-right-radius: var(--min-radius);
+    border-top-right-radius: var(--max-radius);
+  }
+  40% {
+    border-top-left-radius: var(--max-radius);
+    border-bottom-left-radius: var(--max-radius);
+    border-bottom-right-radius: var(--min-radius);
+    border-top-right-radius: var(--min-radius);
+  }
+  60% {
+    border-top-left-radius: var(--max-radius);
+    border-bottom-left-radius: var(--max-radius);
+    border-bottom-right-radius: var(--max-radius);
+    border-top-right-radius: var(--min-radius);
+  }
+  80% {
+    border-top-left-radius: var(--min-radius);
+    border-bottom-left-radius: var(--max-radius);
+    border-bottom-right-radius: var(--max-radius);
+    border-top-right-radius: var(--max-radius);
+  }
+  100% {
+    border-top-left-radius: var(--min-radius);
+    border-bottom-left-radius: var(--min-radius);
+    border-bottom-right-radius: var(--max-radius);
+    border-top-right-radius: var(--max-radius);
+  }
+}
+
+.SKU-text {
+  margin: var(--spacing-1) 0 0 0;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+.scan-status {
+  font-weight: 500;
+  font-size: 0.85rem;
+  line-height: 0.85rem;
+}

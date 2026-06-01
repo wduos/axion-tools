@@ -1,4 +1,3 @@
-import logoImg from "../../assets/logo.svg";
 import inspectrLogoImg from "../../assets/inspectr-logo.svg";
 
 import Header from "../../components/Header/Header";
@@ -9,6 +8,7 @@ function Home() {
   const pageName = "Home";
   const cards = [
     {
+      path: "/inspectr",
       cardDescription: "Reliable inbound inspections",
       logoImg: inspectrLogoImg,
       imgAlt: "Inspectr logo",
@@ -23,6 +23,7 @@ function Home() {
       <section className="Home">
         {cards.map((card, index) => (
           <Card
+            path={card.path}
             logoImg={card.logoImg}
             imgAlt={card.imgAlt}
             cardDescription={card.cardDescription}
