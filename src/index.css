@@ -43,6 +43,9 @@ body {
 .dim {
   color: var(--dim);
 }
+.bold {
+  font-weight: 500;
+}
 .center {
   display: block;
   text-align: center;

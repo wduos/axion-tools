@@ -1,5 +1,5 @@
 :root {
-  --min-radius: 9rem;
+  --min-radius: 10rem;
   --max-radius: 11rem;
 }
 
@@ -14,6 +14,10 @@
 }
 .Inspectr > img {
   height: 3rem;
+
+  @media (max-width: 300px) {
+    height: 2.2rem;
+  }
 }
 .Inspectr > small {
   padding-inline: var(--spacing);
@@ -34,22 +38,26 @@
   border-top-right-radius: var(--max-radius);
   user-select: none;
   animation: 15s cubic-bezier(0.58, -0.78, 0.5, 1.8) 1s infinite forwards blob;
+
+  @media (max-width: 300px) {
+    height: 8rem;
+  }
 }
 .Inspectr > .blob-wrp > .blob > img {
-  height: 2.5rem;
+  height: 4rem;
   transform: rotate(-90deg);
+
+  @media (max-width: 300px) {
+    height: 3rem;
+  }
 }
 .Inspectr > .blob-wrp > .blob.alt {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -0.25rem;
+  left: -0.25rem;
   transform: rotate(90deg);
   background-image: none;
-  background-color: var(--accent-opaque);
-  border-top-left-radius: var(--min-radius);
-  border-bottom-left-radius: var(--min-radius);
-  border-bottom-right-radius: var(--max-radius);
-  border-top-right-radius: var(--max-radius);
+  border: solid 0.25rem var(--accent-opaque);
   animation: 20s cubic-bezier(0.41, -0.59, 0.13, 1.58) 1s infinite forwards blob;
 }
 
@@ -92,11 +100,26 @@
   }
 }
 
-.SKU-text {
-  margin: var(--spacing-1) 0 0 0;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+.Inspectr > table {
+  margin-block: var(--spacing-1);
+  background-color: white;
+  border: solid 1px var(--border);
+  box-shadow: 0 0 15px var(--accent-opaque);
 }
+.Inspectr > table > tr:nth-child(even) {
+  background-color: var(--light-tint);
+}
+.Inspectr > table > tr > td {
+  min-width: 4rem;
+  padding: var(--spacing);
+  border: solid 1px var(--border);
+  font-size: 0.85rem;
+
+  @media (max-width: 300px) {
+    padding: var(--spacing-1);
+  }
+}
+
 .scan-status {
   font-weight: 500;
   font-size: 0.85rem;

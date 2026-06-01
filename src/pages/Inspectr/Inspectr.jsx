@@ -1,5 +1,6 @@
 import inspectrLogoImg from "../../assets/inspectr-logo.svg";
 import iconBarcode from "../../assets/icons/barcode.svg";
+import box3DImg from "../../assets/box-3d.png";
 import Header from "../../components/Header/Header";
 import "./Inspectr.css";
 
@@ -18,10 +19,23 @@ function Inspectr() {
         <div className="blob-wrp">
           <div className="blob"></div>
           <div className="blob alt">
-            <img src={iconBarcode} alt="Barcode icon" />
+            <img src={box3DImg} alt="Barcode icon" />
           </div>
         </div>
-        <h2 className="dim SKU-text">00000000000</h2>
+        <table>
+          <tr>
+            <td className="bold">Current SKU</td>
+            <td className="dim">undefined</td>
+          </tr>
+          <tr>
+            <td className="bold">Number of Boxes</td>
+            <td className="dim">undefined</td>
+          </tr>
+          <tr>
+            <td className="bold">Divergent Reads</td>
+            <td className="dim">undefined</td>
+          </tr>
+        </table>
         <small className="scan-status">Awaiting barcode scan</small>
       </section>
     </>
