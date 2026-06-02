@@ -17,10 +17,10 @@ function Inspectr() {
           Scan an SKU from a box in the pallet to begin
         </small>
         <div className="blob-wrp">
-          <div className="blob"></div>
-          <div className="blob alt">
+          <div className="blob">
             <img src={box3DImg} alt="Barcode icon" />
           </div>
+          <div className="blob alt"></div>
         </div>
         <table>
           <tr>

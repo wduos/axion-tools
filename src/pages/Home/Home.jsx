@@ -31,7 +31,6 @@ function Home() {
             key={index}
           />
         ))}
-        <Card />
       </section>
     </>
   );
