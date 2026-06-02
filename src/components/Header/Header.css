@@ -1,18 +1,71 @@
 .Header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--spacing);
-  width: calc(100% - var(--spacing) * 2);
-  padding: var(--spacing);
-  border-bottom: solid 1px var(--border);
+  position: relative;
+  width: 100%;
   background-color: white;
   z-index: 10;
 }
-.Header > button {
+.Header > .header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing);
+  border-bottom: solid 1px var(--border);
+}
+.Header > .header-top > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.Header > .header-top > a > img {
+  height: 1.5rem;
+}
+.Header > .header-top > button {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-1);
+  border: solid 1px var(--border);
+  border-radius: var(--radius-1);
+  background-color: transparent;
+  outline: solid 2px transparent;
+  transition: outline 0.2s ease-out;
+}
+.Header > .header-top > button:hover {
+  outline: solid 2px var(--accent-opaque);
+  cursor: pointer;
+}
+.Header > .header-top > button > img {
+  height: 1rem;
+}
+.Header > .header-bottom {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1);
+  border-bottom: solid 1px var(--border);
+}
+.Header > .header-bottom > .header-page-tag {
+  display: flex;
+  align-items: center;
+  background-color: var(--border);
+  padding: var(--spacing-1);
+  border-radius: var(--radius-1);
+  gap: var(--spacing-1);
+  text-decoration: none;
+  color: var(--dark);
+  user-select: none;
+}
+.Header > .header-bottom > .header-page-tag > img {
+  height: 1rem;
+}
+.Header > .header-bottom > .header-page-tag > h2 {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 0.85rem;
+}
+/* .Header > button {
   display: flex;
   align-items: center;
   gap: var(--spacing-1);
@@ -49,4 +102,4 @@
   font-size: 0.85rem;
   font-weight: 600;
   line-height: 0.85rem;
-}
+} */

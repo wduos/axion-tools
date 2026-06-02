@@ -5,6 +5,7 @@ import iconHouse from "../../assets/icons/house.svg";
 import iconLayers from "../../assets/icons/layers.svg";
 import iconInfo from "../../assets/icons/info.svg";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 function Header({ currentPage }) {
@@ -19,26 +20,40 @@ function Header({ currentPage }) {
   return (
     <>
       <header className="Header">
-        <button type="button" onClick={() => handleShowSidebar()}>
-          <img src={iconBars} alt="Staggered bars icon" />
-          <img src={logoImg} alt="Axion's logo" />
-        </button>
-
-        <div className="header-right">
-          <div>
-            {isHome ? (
+        <div className="header-top">
+          <Link to="/">
+            <img src={logoImg} alt="Axion's logo" />
+          </Link>
+          <button type="button" onClick={() => handleShowSidebar()}>
+            <img src={iconBars} alt="Staggered bars icon" />
+          </button>
+        </div>
+        <div className="header-bottom">
+          {isHome ? (
+            <div className="header-page-tag" to="/">
               <img src={iconHouse} alt="House icon" />
-            ) : isInfo ? (
+              <h2>{currentPage}</h2>
+            </div>
+          ) : isInfo ? (
+            <div className="header-page-tag">
               <img src={iconInfo} alt="Info icon" />
-            ) : (
-              <img src={iconLayers} alt="Layers icon" />
-            )}
-            <h2>{currentPage}</h2>
-          </div>
+              <h2>{currentPage}</h2>
+            </div>
+          ) : (
+            <>
+              <Link className="header-page-tag" to="/">
+                <img src={iconHouse} alt="House icon" />
+              </Link>
+              <div className="header-page-tag">
+                <img src={iconLayers} alt="Layers icon" />
+                <h2>{currentPage}</h2>
+              </div>
+            </>
+          )}
         </div>
       </header>
 
-      <Sidebar currentPage={currentPage} shown={showSidebar} />
+      {/* <Sidebar currentPage={currentPage} shown={showSidebar} /> */}
       <div
         className="sidebar-mask"
         style={{ display: showSidebar ? "block" : "none" }}

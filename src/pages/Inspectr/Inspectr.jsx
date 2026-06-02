@@ -1,5 +1,4 @@
 import inspectrLogoImg from "../../assets/inspectr-logo.svg";
-import iconBarcode from "../../assets/icons/barcode.svg";
 import box3DImg from "../../assets/box-3d.png";
 import Header from "../../components/Header/Header";
 import "./Inspectr.css";

@@ -9,8 +9,7 @@
   justify-content: center;
   flex-direction: column;
   gap: var(--spacing);
-  margin-top: 3.5rem;
-  height: calc(100% - 3.5rem);
+  height: calc(100% - 6.4rem);
 }
 .Inspectr > img {
   height: 3rem;
@@ -61,6 +60,10 @@
   outline: none;
   transform: rotate(90deg);
   animation: 20s cubic-bezier(0.41, -0.59, 0.13, 1.58) 1s infinite forwards blob;
+
+  @media (max-width: 300px) {
+    height: 8rem;
+  }
 }
 
 @keyframes blob {

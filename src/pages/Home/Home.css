@@ -5,9 +5,5 @@
   flex-wrap: wrap;
   gap: var(--spacing);
   width: calc(100% - var(--spacing) * 2);
-  margin-top: 3.5rem;
   padding: var(--spacing);
-}
-.Home > img {
-  height: 2.5rem;
 }
